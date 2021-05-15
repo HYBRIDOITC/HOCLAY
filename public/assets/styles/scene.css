@@ -1,0 +1,45 @@
+
+canvas {
+    z-index: 1;
+    display: block;
+    vertical-align: text-bottom;
+    opacity: 1!important;
+  }
+  #scene{
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      opacity: 1!important;
+  }
+  /* ---- particles.js container ---- */
+  #particles-js, #parallax, .layer, .some-space, .some-more-space{
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+  }
+     /* ---- stats.js ---- */
+     #particles-js{
+      opacity: 1;
+    }h1{
+      color: white;
+      font-size: 5em;
+      font-weight: 100;
+      letter-spacing: .2em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%,-50%,0);}
+  .some-space{
+    animation: rotate 18s .5s infinite linear reverse;
+  }
+  
+  .some-more-space{
+    animation: rotate 15s .1s infinite linear;
+  }
+  
+  *, ::before, ::after {
+      box-sizing: border-box;
+  }
+    

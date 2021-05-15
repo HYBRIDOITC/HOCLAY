@@ -1,0 +1,109 @@
+/*----------------------------------------------------------------------
+Page loader CSS BY HighHay
+
+USAGE:
+------
+- Add this as an external CSS file and put it before other css links inside
+html file
+- Add the following tag inside HTML file :
+<div class='page-loader'>
+    <div><i class='fa fa-spinner  fa-spin'></i><p>loading</p></div>
+</div>
+------------------------------------------------------------------------*/
+.page-loader{
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: #333333;
+    display: block;  
+    
+}
+.page-loader .fa{
+    font-size: 2.5rem;
+}
+.page-loader,
+.page-loader.visible{
+    -webkit-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -moz-transition: 0.6s;
+    transition: 0.6s;
+    opacity: 1;
+    visibility: visible;    
+}
+.page-loader.hidden{
+    visibility: hidden;
+/*    display: none;*/
+    opacity: 0;
+    
+}
+    .page-loader div{
+        position: absolute;
+        top:50%;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        margin-top: -1rem;
+        font-size: 4rem;
+    }
+        .page-loader div p{
+            margin-top: 1.0rem;
+            font-size: 1.0rem;
+            color: #fff;
+            letter-spacing: -0.05rem;
+            padding-left: 0.15rem;
+            text-transform: uppercase;
+            font-family: 'OpenSans-Light'; 
+        }
+
+
+body .container,
+body .border {
+  width: 10vh;
+  height: 10vh;
+  background: #292929;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -32%);
+  -webkit-clip-path: polygon(0% 50%, 25% 95%, 75% 95%, 100% 50%, 75% 5%, 25% 5%);
+          clip-path: polygon(0% 50%, 25% 95%, 75% 95%, 100% 50%, 75% 5%, 25% 5%);
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+body .container .border,
+body .border .border {
+  width: 99%;
+  height: 99%;
+}
+body .container .border .content,
+body .border .border .content {
+  width: 150%;
+  height: 100%;
+  background: #0984e3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: contentAnimation 2s infinite linear;
+          animation: contentAnimation 2s infinite linear;
+  transform-origin: center top;
+}
+@-webkit-keyframes contentAnimation {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(-360deg);
+  }
+}
+@keyframes contentAnimation {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(-360deg);
+  }
+}
